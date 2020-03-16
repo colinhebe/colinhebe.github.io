@@ -28,7 +28,7 @@ url: "https://colinhebe.github.com" # the base hostname & protocol for your site
 github_username:  colinhebe
 
 # Build settings
-theme: jekyll-theme-cayman
+theme: jekyll-theme-minimal
 plugins:
   - jekyll-feed
 
