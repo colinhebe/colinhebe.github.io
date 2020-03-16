@@ -114,3 +114,7 @@ float angle = Math.atan2(curTan[0], curTan[1]);
 ```
 
 原文链接：[https://blog.csdn.net/itermeng/article/details/80264577](https://blog.csdn.net/itermeng/article/details/80264577)
+
+## Articals:
+
+[https://javascript.info/bezier-curve#control-points](https://javascript.info/bezier-curve#control-points)
