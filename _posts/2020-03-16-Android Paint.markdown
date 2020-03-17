@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title:  "Android Bézier curve"
 date:   2020-03-16 10:09:00 +0800
 categories: [Android, graphic]
