@@ -1,10 +1,3 @@
----
-layout: default
-title:  "Android Bézier curve"
-date:   2020-03-16 10:09:00 +0800
-categories: [Android, graphic]
----
-
 # 二阶贝塞尔曲线实现
 
 Android已提供绘制二阶贝塞尔曲线的方法quadTo(x,y,x2,y2)，因此代码实现非常简单基础，如下：
