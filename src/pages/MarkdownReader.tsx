@@ -12,7 +12,7 @@ export default function MarkdownReader() {
 
   useEffect(() => {
     if (!filename) return;
-    fetch(`/public/posts/${filename}`)
+    fetch(`/posts/${filename}`)
       .then((res) => {
         if (!res.ok) throw new Error("File not found");
         return res.text();
@@ -30,7 +30,7 @@ export default function MarkdownReader() {
         </Button>
       </header>
       <Card className="w-full">
-        <CardContent className="prose max-w-none py-6">
+        <CardContent className="prose dark:prose-invert max-w-none py-6">
           {error ? (
             <div className="text-red-500">{error}</div>
           ) : (

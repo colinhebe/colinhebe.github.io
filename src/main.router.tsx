@@ -2,9 +2,9 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
-import Home from "./Home";
-import KnowledgeBase from "./KnowledgeBase";
-import MarkdownReader from "./MarkdownReader";
+import Home from "@/pages/Home";
+import KnowledgeBase from "@/pages/KnowledgeBase";
+import MarkdownReader from "@/pages/MarkdownReader";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
