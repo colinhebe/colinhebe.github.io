@@ -43,6 +43,11 @@ export default function Home() {
               </Link>
             </Button>
             <Button variant="outline" asChild>
+              <Link onClick={toggleFont} to="#">
+                <TypeOutline />
+              </Link>
+            </Button>
+            <Button variant="outline" asChild>
               <Link to="/kb">
                 <BookOpenText />
               </Link>
@@ -63,8 +68,10 @@ export default function Home() {
 
       <section className="space-y-6 w-full">
         <Project
-          name="AotianOS"
-          description="A lightweight empathetic AI framework for reflective conversations."
+          name="Rhymove"
+          description="A music-enhanced fitness timer. MVP in progress with public roadmap."
+          link="https://rhymove.pages.dev"
+          github="https://github.com/users/colinhebe/projects/3"
         />
         <Project
           name="BotBoats"
@@ -73,9 +80,8 @@ export default function Home() {
           github="https://github.com/colinhebe/botboats"
         />
         <Project
-          name="Rhymove"
-          description="A music-enhanced fitness timer. MVP in progress with public roadmap."
-          link="https://github.com/users/colinhebe/projects/3"
+          name="AotianOS"
+          description="A lightweight empathetic AI framework for reflective conversations."
         />
       </section>
 
