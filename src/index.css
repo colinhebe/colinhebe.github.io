@@ -2,7 +2,9 @@
 @plugin "@tailwindcss/typography";
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  /* defined in .env */
+  font-family: "Finger Paint", "ZCOOL KuaiLe", cursive, system-ui, Avenir,
+    Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -105,6 +107,11 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
 }
 
 @theme inline {
