@@ -30,7 +30,5 @@ if (needCommit) {
 try {
   exec("git remote remove origin");
 } catch {}
-exec(
-  "git remote add origin https://github.com/colinhebe/colinhebe.github.io.git"
-);
+exec("git remote add origin https://github.com/c01-in/c01-in.github.io.git")
 exec("git push -f origin gh-pages");

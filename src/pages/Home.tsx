@@ -26,82 +26,78 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-6 py-12 max-w-3xl mx-auto">
-      <header className="mb-12 w-full">
-        <div className="flex items-center justify-between w-full">
-          <div>
-            <h1 className="text-3xl font-bold mb-2">c01in</h1>
-            <span className="sr-only">Colin Lyu</span>
-            <p className="text-muted-foreground">
-              Engineer · Builder · Minimalist
-            </p>
-          </div>
-          <div className="flex items-center gap-2">
-            <Button variant="outline" asChild>
-              <Link onClick={refreshMood} to="#">
-                <RefreshCw />
-              </Link>
-            </Button>
-            <Button variant="outline" asChild>
-              <Link onClick={toggleFont} to="#">
-                <TypeOutline />
-              </Link>
-            </Button>
-            <Button variant="outline" asChild>
-              <Link to="/kb">
-                <BookOpenText />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <main className="min-h-screen flex flex-col items-center justify-center px-6 py-12 max-w-3xl mx-auto">
+          <header className="mb-12 w-full">
+              <div className="flex items-center justify-between w-full">
+                  <div>
+                      <h1 className="text-3xl font-bold mb-2">c01in</h1>
+                      <span className="sr-only">Colin Lyu</span>
+                      <p className="text-muted-foreground">Engineer · Builder · Minimalist</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+                      <Button variant="outline" asChild>
+                          <Link onClick={refreshMood} to="#">
+                              <RefreshCw />
+                          </Link>
+                      </Button>
+                      <Button variant="outline" asChild>
+                          <Link onClick={toggleFont} to="#">
+                              <TypeOutline />
+                          </Link>
+                      </Button>
+                      <Button variant="outline" asChild>
+                          <Link to="/kb">
+                              <BookOpenText />
+                          </Link>
+                      </Button>
+                  </div>
+              </div>
+          </header>
 
-      <section className="mb-12 w-full">
-        <Suspense
-          fallback={
-            <div className="w-full h-48 bg-muted rounded-lg animate-pulse" />
-          }
-        >
-          <CurrentMood />
-        </Suspense>
-      </section>
+          <section className="mb-12 w-full">
+              <Suspense
+                  fallback={<div className="w-full h-48 bg-muted rounded-lg animate-pulse" />}
+              >
+                  <CurrentMood />
+              </Suspense>
+          </section>
 
-      <section className="space-y-6 w-full">
-        <Project
-          name="Rhymove"
-          description="A music-enhanced fitness timer. MVP in progress with public roadmap."
-          link="https://rhymove.pages.dev"
-          github="https://github.com/users/colinhebe/projects/3"
-        />
-        <Project
-          name="BotBoats"
-          description="A lightweight, offline-first AI assistant platform featuring customizable characters, local chat history, and support for your own API keys — all packed in a PWA you can run anywhere."
-          link="https://botboats.pages.dev"
-          github="https://github.com/colinhebe/botboats"
-        />
-        <Project
-          name="AotianOS"
-          description="A lightweight empathetic AI framework for reflective conversations."
-        />
-      </section>
+          <section className="space-y-6 w-full">
+              <Project
+                  name="Rhymove"
+                  description="A music-enhanced fitness timer. MVP in progress with public roadmap."
+                  link="https://rhymove.pages.dev"
+                  github="https://github.com/users/c01-in/projects/3"
+              />
+              <Project
+                  name="BotBoats"
+                  description="A lightweight, offline-first AI assistant platform featuring customizable characters, local chat history, and support for your own API keys — all packed in a PWA you can run anywhere."
+                  link="https://botboats.pages.dev"
+                  github="https://github.com/c01-in/botboats"
+              />
+              <Project
+                  name="AotianOS"
+                  description="A lightweight empathetic AI framework for reflective conversations."
+              />
+          </section>
 
-      <footer className="mt-24 text-sm text-muted-foreground w-full text-center flex flex-col items-center gap-2">
-        <div className="flex items-center justify-center gap-2">
-          <span>© {new Date().getFullYear()} Colin Lyu</span>
-          <Button
-            size="icon"
-            variant="ghost"
-            title="Toggle font"
-            aria-label="Toggle handwriting font / default font"
-            style={{ padding: 0, width: 32, height: 32 }}
-            onClick={toggleFont}
-          >
-            <TypeOutline />
-          </Button>
-        </div>
-      </footer>
-    </main>
-  );
+          <footer className="mt-24 text-sm text-muted-foreground w-full text-center flex flex-col items-center gap-2">
+              <div className="flex items-center justify-center gap-2">
+                  <span>© {new Date().getFullYear()} Colin Lyu</span>
+                  <Button
+                      size="icon"
+                      variant="ghost"
+                      title="Toggle font"
+                      aria-label="Toggle handwriting font / default font"
+                      style={{ padding: 0, width: 32, height: 32 }}
+                      onClick={toggleFont}
+                  >
+                      <TypeOutline />
+                  </Button>
+              </div>
+          </footer>
+      </main>
+  )
 }
 
 function Project({
