@@ -25,29 +25,29 @@ export default function MarkdownReader() {
   }, [filename]);
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center px-6 py-12 max-w-3xl mx-auto">
-      <header className="mb-8 w-full flex items-center justify-between">
-        <h1 className="text-2xl font-bold">Markdown Reader</h1>
-        <div className="flex items-center gap-2">
-          <Button variant="outline" colorTheme="primary" onClick={toggleFont}>
-            <TypeOutline />
-          </Button>
-          <Button variant="outline" colorTheme="primary" onClick={() => navigate("/kb")}>
-            <BookOpenText />
-          </Button>
-        </div>
-      </header>
-      <Card className="w-full">
-        <CardContent className="prose dark:prose-invert max-w-none py-6">
-          {error ? (
-            <div className="text-red-500">{error}</div>
-          ) : (
-            <MarkdownRender content={content} />
-          )}
-        </CardContent>
-      </Card>
-    </main>
-  );
+      <main className="min-h-screen flex flex-col items-center justify-center px-6 py-12 max-w-3xl mx-auto">
+          <header className="mb-8 w-full flex items-center justify-end">
+              {/* <h1 className="text-2xl font-bold">Markdown Reader</h1> */}
+              <div className="flex items-center gap-2">
+                  <Button variant="outline" colorTheme="primary" onClick={toggleFont}>
+                      <TypeOutline />
+                  </Button>
+                  <Button variant="outline" colorTheme="primary" onClick={() => navigate("/kb")}>
+                      <BookOpenText />
+                  </Button>
+              </div>
+          </header>
+          <Card className="w-full">
+              <CardContent className="prose dark:prose-invert max-w-none py-6">
+                  {error ? (
+                      <div className="text-red-500">{error}</div>
+                  ) : (
+                      <MarkdownRender content={content} />
+                  )}
+              </CardContent>
+          </Card>
+      </main>
+  )
 }
 
 function MarkdownRender({ content }: { content: string }) {

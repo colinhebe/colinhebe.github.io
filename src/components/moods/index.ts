@@ -10,9 +10,13 @@ export const allMoodImporters: MoodImporter[] = [
     () => import("./July17"),
     () => import("./July18"),
     () => import("./July20"),
+    () => import("./July25"),
+
     // To add a new mood, just add a new line here, e.g.:
     // () => import("./July19"),
 ]
+
+let isFirstCall = true; // Track if it's the first call
 
 /**
  * Gets a random mood importer function from the list.
@@ -20,6 +24,11 @@ export const allMoodImporters: MoodImporter[] = [
  * @returns A new mood importer function.
  */
 export const getRandomMoodImporter = (current?: MoodImporter): MoodImporter => {
+  if (isFirstCall) {
+      isFirstCall = false
+      return allMoodImporters[allMoodImporters.length - 1] // Return the last importer on the first call
+  }
+
   if (allMoodImporters.length <= 1) {
     return allMoodImporters[0];
   }

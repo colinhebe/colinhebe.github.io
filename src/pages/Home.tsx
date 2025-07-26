@@ -87,16 +87,6 @@ export default function Home() {
           <footer className="mt-24 text-sm text-muted-foreground w-full text-center flex flex-col items-center gap-2">
               <div className="flex items-center justify-center gap-2">
                   <span>© {new Date().getFullYear()} Colin Lyu</span>
-                  <Button
-                      size="icon"
-                      variant="ghost"
-                      title="Toggle font"
-                      aria-label="Toggle handwriting font / default font"
-                      style={{ padding: 0, width: 32, height: 32 }}
-                      onClick={toggleFont}
-                  >
-                      <TypeOutline />
-                  </Button>
               </div>
           </footer>
       </main>

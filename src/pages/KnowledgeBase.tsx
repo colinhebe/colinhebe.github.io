@@ -6,22 +6,27 @@ import { toggleFont } from "@/lib/utils";
 import { RandomIllustration } from "@/components/ui/random_illustration";
 
 const posts = [
-  {
-    title: "Comparison of Flutter State Management Mechanisms",
-    date: "2025-07-18",
-    filename: "2025-07-18-flutter_state_mgmt.md",
-  },
-  {
-    title: "2025 Android tech stack",
-    date: "2025-06-30",
-    filename: "2025 Android tech stack.md",
-  },
-  {
-    title: "Android Paint",
-    date: "2020-03-16",
-    filename: "2020-03-16-Android Paint.md",
-  },
-];
+    {
+        title: "AudioMass: Free Online Audio Editor",
+        date: "2025-07-25",
+        filename: "2025-07-25-AudioMass.md",
+    },
+    {
+        title: "Comparison of Flutter State Management Mechanisms",
+        date: "2025-07-18",
+        filename: "2025-07-18-flutter_state_mgmt.md",
+    },
+    {
+        title: "2025 Android tech stack",
+        date: "2025-06-30",
+        filename: "2025 Android tech stack.md",
+    },
+    {
+        title: "Android Paint",
+        date: "2020-03-16",
+        filename: "2020-03-16-Android Paint.md",
+    },
+]
 
 export default function KnowledgeBase() {
   const navigate = useNavigate();
