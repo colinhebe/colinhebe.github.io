@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import ReactMarkdown from "react-markdown";
@@ -8,6 +8,7 @@ import { toggleFont } from "@/lib/utils";
 import { BookOpenText, TypeOutline } from "lucide-react";
 
 export default function MarkdownReader() {
+  const navigate = useNavigate();
   const { filename } = useParams();
   const [content, setContent] = useState("");
   const [error, setError] = useState("");
@@ -28,15 +29,11 @@ export default function MarkdownReader() {
       <header className="mb-8 w-full flex items-center justify-between">
         <h1 className="text-2xl font-bold">Markdown Reader</h1>
         <div className="flex items-center gap-2">
-          <Button variant="outline" asChild>
-            <Link onClick={toggleFont} to="#">
-              <TypeOutline />
-            </Link>
+          <Button variant="outline" colorTheme="primary" onClick={toggleFont}>
+            <TypeOutline />
           </Button>
-          <Button variant="outline" asChild>
-            <Link to="/kb">
-              <BookOpenText />
-            </Link>
+          <Button variant="outline" colorTheme="primary" onClick={() => navigate("/kb")}>
+            <BookOpenText />
           </Button>
         </div>
       </header>

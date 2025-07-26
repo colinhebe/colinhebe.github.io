@@ -8,13 +8,14 @@ import {
   BookOpenText,
 } from "lucide-react";
 import { DynamicIcon } from "lucide-react/dynamic";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { toggleFont } from "@/lib/utils";
 import { getRandomMoodImporter } from "@/components/moods";
 
 type MoodImporter = () => Promise<{ default: ComponentType<any> }>;
 
 export default function Home() {
+  const navigate = useNavigate();
   const [moodImporter, setMoodImporter] = useState<MoodImporter>(() =>
     getRandomMoodImporter()
   );
@@ -24,6 +25,8 @@ export default function Home() {
   const refreshMood = () => {
     setMoodImporter((prev) => getRandomMoodImporter(prev));
   };
+
+
 
   return (
     <main className="min-h-screen flex flex-col items-center justify-center px-6 py-12 max-w-3xl mx-auto">
@@ -37,20 +40,18 @@ export default function Home() {
             </p>
           </div>
           <div className="flex items-center gap-2">
-            <Button variant="outline" asChild>
-              <Link onClick={refreshMood} to="#">
-                <RefreshCw />
-              </Link>
+            <Button
+              variant="outline"
+              colorTheme="primary"
+              onClick={refreshMood}
+            >
+              <RefreshCw />
             </Button>
-            <Button variant="outline" asChild>
-              <Link onClick={toggleFont} to="#">
-                <TypeOutline />
-              </Link>
+            <Button variant="outline" colorTheme="primary" onClick={toggleFont}>
+              <TypeOutline />
             </Button>
-            <Button variant="outline" asChild>
-              <Link to="/kb">
-                <BookOpenText />
-              </Link>
+            <Button variant="outline" colorTheme="primary" onClick={() => navigate("/kb")}>
+              <BookOpenText />
             </Button>
           </div>
         </div>
