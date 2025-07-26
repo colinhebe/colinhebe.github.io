@@ -7,11 +7,12 @@ type MoodImporter = () => Promise<{ default: ComponentType<any> }>;
 // Make sure your mood components are default exports.
 // e.g. in July17.tsx: `export default function July17() { ... }`
 export const allMoodImporters: MoodImporter[] = [
-  () => import("./July17"),
-  () => import("./July18"),
-  // To add a new mood, just add a new line here, e.g.:
-  // () => import("./July19"),
-];
+    () => import("./July17"),
+    () => import("./July18"),
+    () => import("./July20"),
+    // To add a new mood, just add a new line here, e.g.:
+    // () => import("./July19"),
+]
 
 /**
  * Gets a random mood importer function from the list.

@@ -49,7 +49,7 @@ npm run preview
 
 ## Deployment
 
-This project is configured to deploy to GitHub Pages at the root of your user site (https://colinhebe.github.io).
+This project is configured to deploy to GitHub Pages at the root of your user site (https://c01-in.github.io).
 
 To deploy:
 
@@ -61,7 +61,7 @@ This will build the project and publish the contents of the `dist` folder to the
 
 ### Notes
 
-- Ensure the `homepage` field in `package.json` is set to `https://colinhebe.github.io`.
+- Ensure the `homepage` field in `package.json` is set to `https://c01-in.github.io`.
 - In `vite.config.ts`, the `base` should be set to `/` for correct asset paths.
 
 ## License
